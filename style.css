@@ -1,0 +1,375 @@
+:root{
+    color-scheme: dark light;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "League Spartan";
+    font-weight: 700;
+    
+}
+button{
+    font-family: "League Spartan";
+    font-weight: 700;
+    font-size: 2em;
+    border: none;
+    outline: none;
+    padding: 0.6em 0;
+    border-radius: 0.5em;
+    cursor: pointer;
+}
+button:nth-of-type(17),
+button:nth-of-type(18){
+    grid-column: span 2;
+}
+
+main{
+    width: 30%;
+    margin: 0 auto;
+    border-radius: 0.6em;
+}
+.head{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    & p{
+        width: fit-content;
+        display: inline;
+        font-size: 2em;
+    }
+    & label{
+        text-transform: uppercase;
+        font-size: 0.8em;
+    }
+    & div{
+        padding: 0.2em 0;
+    }
+}
+input[type="range"]{
+    width:80px;
+    height: 25px;
+    border-radius: 2em;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    align-items: flex-end;
+    padding: 0.1em 0;
+}
+
+#range::before{
+    content:"123";
+    display: block;
+    width:80px;
+    height:25px;
+}
+.screen{
+    width:100%;
+    
+    border-radius: 0.6em;
+    height: 7em;
+    margin: 1em auto;
+    overflow: hidden;
+    text-align: right;
+    & P{
+        padding: 0.3em;
+        font-size: 4em;
+    }
+}
+.pad{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    width:100%;
+    gap:1.5em;
+    margin: 0 auto;
+    padding: 1em;
+    border-radius: 0.6em;
+}
+
+
+.dark-theme{
+    body{
+        background-color: hsl(222, 26%, 31%);
+    }
+    .screen{
+        background-color: hsl(224, 36%, 15%);
+        & p{
+            color: hsl(0, 0%, 100%);
+        }
+    }
+    .pad{
+        background-color: hsl(223, 31%, 20%);
+    }
+    button{
+        background-color: hsl(0, 0%, 100%);
+        color:hsl(221, 14%, 31%);
+        border-bottom: 5px solid hsl(28, 16%, 65%);
+    }
+
+    button:hover{
+        background-color: hsl(225, 21%, 49%);
+        border-bottom: 3px solid hsl(224, 28%, 35%);
+        color:hsl(0, 0%, 100%);
+    }
+    button:nth-of-type(4),
+    button:nth-of-type(17){
+        background-color: hsl(225, 21%, 49%);
+        border-bottom: 5px solid hsl(224, 28%, 35%);
+        color:hsl(0, 0%, 100%);
+    }
+    button:nth-of-type(18){
+        background-color: hsl(6, 63%, 50%);
+        border-bottom: 5px solid hsl(6, 70%, 34%);
+        color: hsl(0, 0%, 100%);
+    }
+    button:nth-of-type(4):hover,
+    button:nth-of-type(17):hover{
+        background-color: hsl(221, 34%, 65%);
+    }
+    button:nth-of-type(18):hover{
+        background-color: hsl(6, 68%, 67%);
+    }
+
+    #range{
+        accent-color:hsl(223, 31%, 20%);
+        
+    }
+    #range::-ms-thumb{
+        background: hsl(6, 70%, 34%);
+        border:none;
+        outline: none;
+        scale: 1.2;
+    }
+    #range::-webkit-slider-thumb{
+        background: hsl(6, 70%, 34%);
+        border:none;
+        outline: none;
+        scale: 1.2;
+    }
+    #range::-moz-range-thumb{
+        background: hsl(6, 70%, 34%);
+        border:none;
+        outline: none;
+        scale: 1.2;
+    }
+    #range::-ms-thumb:hover,
+    #range::-ms-thumb:active,
+    #range::-ms-thumb:focus{
+        background: hsl(6, 63%, 50%);
+    }
+    #range::-webkit-slider-thumb:hover,
+    #range::-webkit-slider-thumb:active,
+    #range::-webkit-slider-thumb:focus{
+        background: hsl(6, 63%, 50%);
+    }
+    #range::-moz-range-thumb:hover,
+    #range::-moz-range-thumb:active,
+    #range::-moz-range-thumb:focus{
+        background: hsl(6, 63%, 50%);
+    }
+}
+
+.light-theme{
+    body{
+        background-color: hsl(0, 0%, 90%);
+    }
+    .head{
+        color:hsl(60, 10%, 19%);
+    }
+    .screen{
+        background-color: hsl(0, 0%, 93%);
+        & p{
+            color: hsl(60, 10%, 19%);
+        }
+    }
+    .pad{
+        background-color: hsl(0, 5%, 81%);
+    }
+    button{
+        background-color: hsl(45, 7%, 89%);
+        color:hsl(60, 10%, 19%);
+        border-bottom: 5px solid hsl(35, 11%, 61%);
+    }
+    button:hover{
+        background-color: hsl(225, 21%, 49%);
+        border-bottom: 3px solid hsl(224, 28%, 35%);
+        color:hsl(0, 0%, 100%);
+    }
+
+    button:nth-of-type(4),
+    button:nth-of-type(17){
+        background-color: hsl(185, 42%, 37%);
+        border-bottom: 5px solid hsl(185, 58%, 25%);
+        color:hsl(0, 0%, 100%);
+    }
+    button:nth-of-type(18){
+        background-color: hsl(25, 98%, 40%);
+        border-bottom: 5px solid hsl(25, 99%, 27%);
+        color: hsl(0, 0%, 100%);
+    }
+    button:nth-of-type(4):hover,
+    button:nth-of-type(17):hover{
+        background-color: hsl(185, 42%, 47%);
+    }
+    button:nth-of-type(18):hover{
+        background-color: hsl(25, 98%, 60%);
+    }
+
+    #range{
+        accent-color:hsl(0, 5%, 81%);
+        
+    }
+    #range::-ms-thumb{
+        background: hsl(25, 98%, 40%);
+        border:none;
+        outline: none;
+        scale: 1.2;
+    }
+    #range::-webkit-slider-thumb{
+        background: hsl(25, 98%, 40%);
+        border:none;
+        outline: none;
+        scale: 1.2;
+    }
+    #range::-moz-range-thumb{
+        background: hsl(25, 98%, 40%);
+        border:none;
+        outline: none;
+        scale: 1.2;
+    }
+    #range::-ms-thumb:hover,
+    #range::-ms-thumb:active,
+    #range::-ms-thumb:focus{
+        background: hsl(25, 98%, 60%);
+    }
+    #range::-webkit-slider-thumb:hover,
+    #range::-webkit-slider-thumb:active,
+    #range::-webkit-slider-thumb:focus{
+        background: hsl(25, 98%, 60%);
+    }
+    #range::-moz-range-thumb:hover,
+    #range::-moz-range-thumb:active,
+    #range::-moz-range-thumb:focus{
+        background: hsl(25, 98%, 60%);
+    }
+}
+.drakula-theme{
+    body{
+        background-color: hsl(268, 75%, 9%);
+    }
+    .head{
+        color:hsl(52, 100%, 62%);
+    }
+    .screen{
+        background-color: hsl(268, 71%, 12%);
+        & p{
+            color: hsl(52, 100%, 62%);
+        }
+    }
+    .pad{
+        background-color: hsl(268, 71%, 12%);
+    }
+    button{
+        background-color: hsl(281, 89%, 26%);
+        color:hsl(52, 100%, 62%);
+        border-bottom: 5px solid hsl(285, 91%, 52%);
+    }
+    button:hover{
+        background-color: hsl(281, 89%, 46%);;
+        border-bottom: 3px solid hsl(224, 28%, 35%);
+        color:hsl(0, 0%, 100%);
+    }
+
+    button:nth-of-type(4),
+    button:nth-of-type(17){
+        background-color: hsl(268, 47%, 21%);
+        border-bottom: 5px solid hsl(290, 70%, 36%);
+        color:hsl(0, 0%, 100%);
+    }
+    button:nth-of-type(18){
+        background-color: hsl(176, 100%, 44%);
+        border-bottom: 5px solid hsl(177, 92%, 70%);
+        color: hsl(198, 20%, 13%);
+    }
+    button:nth-of-type(4):hover,
+    button:nth-of-type(17):hover{
+        background-color: hsl(268, 47%, 41%);
+    }
+    button:nth-of-type(18):hover{
+        background-color: hsl(177, 92%, 70%);
+    }
+
+    #range{
+        accent-color:hsl(268, 71%, 12%);
+        
+    }
+    #range::-ms-thumb{
+        background: hsl(176, 100%, 44%);
+        border:none;
+        outline: none;
+        scale: 1.2;
+    }
+    #range::-webkit-slider-thumb{
+        background: hsl(176, 100%, 44%);
+        border:none;
+        outline: none;
+        scale: 1.2;
+    }
+    #range::-moz-range-thumb{
+        background: hsl(176, 100%, 44%);
+        border:none;
+        outline: none;
+        scale: 1.2;
+    }
+    #range::-ms-thumb:hover,
+    #range::-ms-thumb:active,
+    #range::-ms-thumb:focus{
+        background: hsl(176, 100%, 64%);
+    }
+    #range::-webkit-slider-thumb:hover,
+    #range::-webkit-slider-thumb:active,
+    #range::-webkit-slider-thumb:focus{
+        background: hsl(176, 100%, 64%);
+    }
+    #range::-moz-range-thumb:hover,
+    #range::-moz-range-thumb:active,
+    #range::-moz-range-thumb:focus{
+        background: hsl(176, 100%, 64%);
+    }
+}
+
+@media (min-width:300px) and (max-width:629px){
+    main{
+        width:90%;
+        height: 100dvh;
+    }
+    section{
+        padding: 1em 0;
+    }
+    button{
+        padding: 0.2em 0.1em;
+    }
+}
+@media (min-width: 630px) and (max-width:799px){
+    main{
+        width:80%;
+    } 
+} 
+@media (min-width:800px) and (max-width:1078px){
+    main{
+        width:60%;
+    }
+}
+
+@media (min-width:1079px) and (max-width:1439px){
+    main{
+        width:40%;
+        height: 100dvh;
+    }
+
+}
